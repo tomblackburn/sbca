@@ -2,6 +2,9 @@ import { AiFillLike, AiFillDislike } from "react-icons/ai";
 import { BsCheck2Circle } from "react-icons/bs";
 import { TiStarOutline } from "react-icons/ti";
 import { Code } from '@mantine/core';
+import { vscodeDark } from "@uiw/codemirror-theme-vscode";
+import { python } from "@codemirror/lang-python";
+import CodeMirror, { EditorState, EditorView } from "@uiw/react-codemirror";
 
 type LessonDescriptionProps = {
     
@@ -68,6 +71,22 @@ const LessonDescription:React.FC<LessonDescriptionProps> = () => {
 									<pre>
                                         cauldron_type = ""
 									</pre>
+								</div>
+							</div>
+                        </div>
+
+                        <div className='mt-4'>
+							<div>
+								<p className='font-medium text-white '>Example 2: </p>
+								<div className='example-card'>
+                                    <CodeMirror
+                                        value='cauldron_type = "medium"'
+                                        theme={vscodeDark}
+                                        extensions={[python(), EditorView.editable.of(false), EditorState.readOnly.of(true)]}
+                                        style={{ fontSize: 16 }}
+                        
+                                       
+                                    />
 								</div>
 							</div>
                         </div>

@@ -15,6 +15,7 @@ const Workspace: React.FC<WorkspaceProps> = () => {
 			<LessonDescription />
             <CodeEditor />
 		</Split>
+        
 	);
 };
 export default Workspace;
