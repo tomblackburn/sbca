@@ -49,10 +49,11 @@ const LessonsTable:React.FC<LessonsTableProps> = () => {
                                     className='hover:text-blue-600 cursor-pointer'
                                     href={`/lessons/${lesson.id}`}
                                 >
-                                    {lesson.title}
+                                    {lesson.order}. {lesson.title}
                                 </Link>
 								
 							</td>
+                            <td className={"px-6 py-4"}>{lesson.section}</td>
 							<td className={"px-6 py-4"}>{lesson.chapter}</td>
                             <td className={`px-6 py-4 ${difficulyColor}`}>{lesson.difficulty}</td>
 							<td className={"px-6 py-4"}>

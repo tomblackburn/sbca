@@ -107,11 +107,16 @@ class School:
                 </div>
 
                 {/* Bottom Panel (Testcases, etc.) */}
-                <div className='w-full px-5 overflow-auto'>
+                <div className='w-full px-5 overflow-auto bg-dark-layer-1point5'>
                     <div className='flex h-10 items-center space-x-6'>
                         <div className='relative flex h-full flex-col justify-center cursor-pointer'>
-                            <div className='text-sm font-medium leading-5 text-white'>Testcases</div>
-                            <hr className='absolute bottom-0 h-0.5 w-full rounded-full border-none bg-white' />
+                            <div className='text-xs font-medium leading-5 text-white inline-block underline underline-offset-8'>TESTCASES</div>
+                        </div>
+                        <div className='relative flex h-full flex-col justify-center cursor-pointer'>
+                            <div className='text-xs font-medium leading-5 text-gray-500 inline-block'>CONSOLE</div>
+                        </div>
+                        <div className='relative flex h-full flex-col justify-center cursor-pointer'>
+                            <div className='text-xs font-medium leading-5 text-gray-500 inline-block'>OUTPUT</div>
                         </div>
                     </div>
 
