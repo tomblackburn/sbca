@@ -44,7 +44,7 @@ const LessonsTable:React.FC<LessonsTableProps> = () => {
 							<th className='px-2 py-4 font-medium whitespace-nowrap text-dark-green-s'>
                                 <BsCheckCircle fontSize={"18"} width='18' />
 							</th>
-							<td className='px-6 py-4'>	
+							<td className='px-6 py-4 text-md'>	
                                 <Link
                                     className='hover:text-blue-600 cursor-pointer'
                                     href={`/lessons/${lesson.id}`}

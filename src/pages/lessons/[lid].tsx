@@ -9,7 +9,7 @@ type LessonPageProps = {
 const LessonPage:React.FC<LessonPageProps> = () => {
     
     return (
-        <div>
+        <div className="overflow-y-hidden">
             <Topbar lessonPage /> 
             <Workspace />
         </div>

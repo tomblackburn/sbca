@@ -4,7 +4,9 @@ import { TiStarOutline } from "react-icons/ti";
 import { Code } from '@mantine/core';
 import { vscodeDark } from "@uiw/codemirror-theme-vscode";
 import { python } from "@codemirror/lang-python";
-import CodeMirror, { EditorState, EditorView } from "@uiw/react-codemirror";
+import CodeMirror, { EditorState, EditorView, highlightActiveLine } from "@uiw/react-codemirror";
+import { NodeNextRequest } from "next/dist/server/base-http/node";
+import YouTube from "react-youtube";
 
 type LessonDescriptionProps = {
     
@@ -24,7 +26,7 @@ const LessonDescription:React.FC<LessonDescriptionProps> = () => {
 			<div className='flex px-0 py-4 h-[calc(100vh-94px)] overflow-y-auto'>
 				<div className='px-5'>
 					{/* Problem heading */}
-					<div className='w-full'>
+					<div className='w-full justify-center'>
 						<div className='flex space-x-4'>
 							<div className='flex-1 mr-2 text-lg text-white font-medium'>1. Basic Alchemy: An Introduction</div>
 						</div>
@@ -50,8 +52,16 @@ const LessonDescription:React.FC<LessonDescriptionProps> = () => {
 							</div>
 						</div>
 
+						<div className="py-5">
+							<YouTube
+								videoId='4xDzrJKXOOY'
+								loading='lazy'
+								iframeClassName='w-full min-h-[100px]'
+							/>
+						</div>
+
 						{/* Lesson Statement(paragraphs) */}
-						<div className='text-white text-sm'>
+						<div className='text-white text-md'>
 							<p className='mt-3'>
                                 The flickering candlelight cast long shadows over the ancient stone walls of the potion classroom. The scent of aged parchment and dried herbs filling the air. At the front of the class, Professor Eldrin paced, his long emerald robes trailing behind him. With a flick of his wand, the blackboard filled with elegant golden script.
 							</p>
@@ -75,21 +85,16 @@ const LessonDescription:React.FC<LessonDescriptionProps> = () => {
 							</div>
                         </div>
 
-                        <div className='mt-4'>
-							<div>
-								<p className='font-medium text-white '>Example 2: </p>
-								<div className='example-card'>
-                                    <CodeMirror
-                                        value='cauldron_type = "medium"'
-                                        theme={vscodeDark}
-                                        extensions={[python(), EditorView.editable.of(false), EditorState.readOnly.of(true)]}
-                                        style={{ fontSize: 16 }}
-                        
-                                       
-                                    />
-								</div>
-							</div>
-                        </div>
+						<div className='w-full flex flex-col overflow-auto relative bg-code-color px-3 py-3 rounded-md'>
+							<CodeMirror className="py-4"
+								value={'cauldron_type = "medium"'}
+								theme={vscodeDark}
+								extensions={[python(), EditorView.editable.of(false), EditorState.readOnly.of(true)]}
+								style={{ fontSize: 14 }}
+								
+							/>
+						</div>
+                      
 
                         <div className='text-white text-sm'>
                             <p className='mt-3'>
