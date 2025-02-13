@@ -13,7 +13,9 @@ module.exports = {
 			colors: {
 				"code-color": "rgb(53,53,53)",
 				"dark-gray-bg": "rgb(1,2,16)",
+				"dark-layer-0": "rgb(53,53,53)",
 				"dark-layer-1": "rgb(40,40,40)",
+				"dark-layer-1point5": "rgb(32,32,32)",
 				"dark-layer-2": "rgb(26,26,26)",
 				"dark-layer-3": "rgb(20,20,20)",
 				"dark-label-2": "rgba(239, 241, 246, 0.75)",
