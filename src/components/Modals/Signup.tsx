@@ -28,39 +28,20 @@ const Signup:React.FC<SignupProps> = () => {
 		e.preventDefault();
 		if (!inputs.email || !inputs.password || !inputs.displayName) return alert("Please fill all fields");
 		try {
-			toast.loading("Creating your account", { position: "top-right", toastId: "loadingToast" });
+			toast.loading("Creating your account", { position: "top-right", toastId: "loadingToast", theme: "dark" });
 			const newUser = await createUserWithEmailAndPassword(inputs.email, inputs.password);
 			if (!newUser) return;
 			router.push("/");
 		} catch (error: any) {
-			toast.error(error.message, {
-				position: "top-right",
-				autoClose: 5000,
-				hideProgressBar: false,
-				closeOnClick: true,
-				pauseOnHover: true,
-				draggable: true,
-				progress: undefined,
-				theme: "colored",
-				transition: Zoom,
-			});
+			alert(error.message)
+				toast.error(error.message, { position: "top-right", theme: "dark"});
 		} finally {
 			toast.dismiss("loadingToast");
 		}
 	};
 
 	useEffect(() => {
-		if (error) toast.error(error.message, { 
-			position: "top-right",
-			autoClose: 5000,
-			hideProgressBar: false,
-			closeOnClick: true,
-			pauseOnHover: true,
-			draggable: true,
-			progress: undefined,
-			theme: "colored",
-			transition: Zoom,
-		 });
+		if (error) alert(error.message)
 	}, [error]);
 
 
