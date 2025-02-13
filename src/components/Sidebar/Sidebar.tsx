@@ -15,7 +15,7 @@ type SidebarProps = {
 const Sidebar:React.FC<SidebarProps> = () => {
 
     return (
-        <aside className="h-screen">
+        <aside className="h-[calc(100vh-50px)] overflow-y-hidden">
             <nav className="h-full flex flex-col bg-dark-layer-3">
 
                 <button className='navbarBtn group'>
