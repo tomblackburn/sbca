@@ -26,6 +26,24 @@ body {
 	}
 }
 
+@layer components {
+
+	.navbarBtn-tooltip {
+		@apply absolute w-auto p-2 text-sm m-2  min-w-max translate-x-3 inline-block ml-8 z-10 rounded-md shadow-md
+		text-dark-layer-2 bg-gray-200  origin-center scale-0 transition-all duration-100 ease-linear group-hover:scale-100;
+	}
+
+	.navbarBtn-tooltipExtension {
+		@apply absolute w-auto p-4 text-sm m-2  min-w-max translate-x-3 inline-block ml-8 z-10 rounded-md shadow-md
+		text-dark-layer-2 bg-dark-layer-3  origin-center scale-0 transition-all duration-100 ease-linear group-hover:scale-100; 
+	}
+
+	.navbarBtnExtension-tooltip {
+		@apply absolute w-auto p-2 text-sm m-2  min-w-max translate-x-3  right-0 top-5 z-10 rounded-md shadow-md invisible
+		text-dark-layer-2 bg-gray-200 origin-center scale-0 transition-all duration-100 ease-linear group-hover:scale-100 hover:visible;
+	}
+}
+
 /* dark  scrollbar */
 ::-webkit-scrollbar {
 	width: 0.5rem;
