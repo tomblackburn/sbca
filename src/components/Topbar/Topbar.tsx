@@ -3,6 +3,7 @@ import { auth } from "@/firebase/firebase";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
+import Image from "next/image";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useSetRecoilState } from "recoil";
 import Logout from "../Buttons/Logout";
@@ -20,7 +21,7 @@ const Topbar: React.FC<TopbarProps> = () => {
 		<nav className='relative flex h-[60px] w-full shrink-0 items-center px-5 bg-dark-layer-1 text-dark-gray-7'>
 			<div className={`flex w-full items-center justify-between max-w-[1200px] mx-auto`}>
 				<Link href='/' className='h-[34px] flex-1'>
-					<img src='/logo-alt.png' alt='Logo' className='h-full' />
+					<Image src='/logo-alt.png' alt='Logo' height={150} width={150} />
 				</Link>
 				<div className='flex items-center space-x-4 flex-1 justify-end'>
 					<div>
