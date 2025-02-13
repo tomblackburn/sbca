@@ -4,21 +4,13 @@ import Head from "next/head";
 import { ToastContainer, Zoom } from "react-toastify";
 import { RecoilRoot } from "recoil";
 import 'react-toastify/dist/ReactToastify.css';
+import '@mantine/core/styles.css';
+import { createTheme, MantineProvider } from '@mantine/core';
 
-/*<ToastContainer 
-				position="top-right"
-				autoClose={5000}
-				hideProgressBar={false}
-				newestOnTop={false}
-				closeOnClick
-				rtl={false}
-				pauseOnFocusLoss
-				draggable
-				pauseOnHover
-				theme="colored"
-				transition={Zoom}
-			/>
-			*/
+const theme = createTheme({
+  /** Put your mantine theme override here */
+});
+
 			
 export default function App({ Component, pageProps }: AppProps) {
 	return (
@@ -33,7 +25,9 @@ export default function App({ Component, pageProps }: AppProps) {
 				/>
 			</Head>
 			<ToastContainer />
-			<Component {...pageProps} />
+			<MantineProvider>
+				<Component {...pageProps} />
+			</MantineProvider>
 		</RecoilRoot>
 	);
 }
