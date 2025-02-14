@@ -12,7 +12,7 @@ type LessonDescriptionProps = {
     lesson: Lesson;
 };
 
-const LessonDescription:React.FC<LessonDescriptionProps> = () => {
+const LessonDescription:React.FC<LessonDescriptionProps> = ( {lesson} ) => {
     
     return (
         <div className='bg-dark-layer-1'>
@@ -28,7 +28,7 @@ const LessonDescription:React.FC<LessonDescriptionProps> = () => {
 					{/* Problem heading */}
 					<div className='w-full justify-center'>
 						<div className='flex space-x-4'>
-							<div className='flex-1 mr-2 text-lg text-white font-medium'>1. Basic Alchemy: An Introduction</div>
+							<div className='flex-1 mr-2 text-lg text-white font-medium'>{lesson.title}</div>
 						</div>
 						<div className='flex items-center mt-3'>
 							<div
@@ -52,6 +52,7 @@ const LessonDescription:React.FC<LessonDescriptionProps> = () => {
 							</div>
 						</div>
 
+						{/*
 						<div className="py-5">
 							<YouTube
 								videoId='4xDzrJKXOOY'
@@ -59,24 +60,20 @@ const LessonDescription:React.FC<LessonDescriptionProps> = () => {
 								iframeClassName='w-full min-h-[100px]'
 							/>
 						</div>
+						*/}
 
 						{/* Lesson Statement(paragraphs) */}
-						<div className='text-white text-md'>
-							<p className='mt-3'>
-                                The flickering candlelight cast long shadows over the ancient stone walls of the potion classroom. The scent of aged parchment and dried herbs filling the air. At the front of the class, Professor Eldrin paced, his long emerald robes trailing behind him. With a flick of his wand, the blackboard filled with elegant golden script.
-							</p>
-							<p className='mt-3'>
-                                "Potion-making is a delicate dance of precision," she began, her voice calm yet commanding. "Even the slightest miscalculation can lead to… unfortunate consequences. Before we begin, we must prepare the proper tools. And that means selecting the correct cauldron."
-							</p>
-                            <p className='mt-3'>
-                                To ensure there is enough room to brew the potion, you must select the correct size cauldron. Set the <Code color="dark" c="red">cauldron_type</Code> variable to "medium".
-                            </p>
+						<div className="flex justify-center pt-3">
+							<div className='text-white text-md'>
+								<div dangerouslySetInnerHTML={{ __html: lesson.content }} />
+							</div>
 						</div>
+						
 
 						{/* Examples */}
 						<div className='mt-4'>
 							<div>
-								<p className='font-medium text-white '>Example 2: </p>
+								<p className='font-medium text-white'>Example 2: </p>
 								<div className='example-card'>
 									<pre>
                                         cauldron_type = ""

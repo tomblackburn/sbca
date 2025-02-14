@@ -1,22 +1,19 @@
 import React from 'react';
-import { useState, useEffect } from "react";
 import PreferenceNavBar from './PreferenceNavBar/PreferenceNavBar';
 import Split from "react-split";
 import CodeMirror from "@uiw/react-codemirror";
 import { vscodeDark } from "@uiw/codemirror-theme-vscode";
 import { python } from "@codemirror/lang-python";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth, firestore } from "@/firebase/firebase";
-import { toast } from "react-toastify";
-import { useRouter } from "next/router";
 import EditorFooter from './EditorFooter';
-import { NodeNextRequest } from 'next/dist/server/base-http/node';
+import { Lesson } from "@/utils/types/lesson";
+
 
 type CodeEditorProps = {
-    
+    lesson: Lesson
 };
 
-const CodeEditor:React.FC<CodeEditorProps> = () => {
+const CodeEditor:React.FC<CodeEditorProps> = ( {lesson} ) => {
+    console.log(lesson)
     const boilerPlate = `# I'm a helpful comment line that can walk you through some of the code
 
 # Here we can create a "class" that helps to describe all the different 
