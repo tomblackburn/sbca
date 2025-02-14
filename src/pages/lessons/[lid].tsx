@@ -10,7 +10,6 @@ type LessonPageProps = {
 };
 
 const LessonPage:React.FC<LessonPageProps> = ( {lesson} ) => {
-    console.log(lesson);
     return (
         <div className="overflow-y-hidden">
             <Topbar lessonPage /> 

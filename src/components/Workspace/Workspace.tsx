@@ -8,6 +8,8 @@ type WorkspaceProps = {
 	lesson: Lesson
 };
 
+
+
 const Workspace: React.FC<WorkspaceProps> = ( {lesson} ) => {
 	return (  
 		<>
@@ -16,9 +18,10 @@ const Workspace: React.FC<WorkspaceProps> = ( {lesson} ) => {
 					<Sidebar />
 				</div>
 				<div className="m-0 p-0 ">
+					
 					<Split className='split' sizes={[40,60]} minSize={0} >
 						<LessonDescription lesson={lesson} />
-						<CodeEditor />
+						<CodeEditor lesson={lesson} />
 					</Split>
 				</div>
 			</div>

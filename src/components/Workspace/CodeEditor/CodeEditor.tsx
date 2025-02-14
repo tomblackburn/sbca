@@ -13,7 +13,6 @@ type CodeEditorProps = {
 };
 
 const CodeEditor:React.FC<CodeEditorProps> = ( {lesson} ) => {
-    console.log(lesson)
     const boilerPlate = `# I'm a helpful comment line that can walk you through some of the code
 
 # Here we can create a "class" that helps to describe all the different 
@@ -94,7 +93,7 @@ class School:
                 <div className='w-full flex flex-col overflow-auto relative'>
                     <div className="flex-1 overflow-auto">
                         <CodeMirror
-                            value={boilerPlate}
+                            value={lesson.starterCode}
                             theme={vscodeDark}
                             extensions={[python()]}
                             style={{ fontSize: 14, outline: 0}}
