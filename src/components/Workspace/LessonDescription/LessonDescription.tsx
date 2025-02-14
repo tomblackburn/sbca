@@ -10,10 +10,12 @@ import { Lesson }from "@/utils/types/lesson";
 
 type LessonDescriptionProps = {
     lesson: Lesson;
+	 /** Percentage width of the LessonDescription panel */
+	 panelWidthPercentage: number;
 };
 
-const LessonDescription:React.FC<LessonDescriptionProps> = ( {lesson} ) => {
-    
+const LessonDescription:React.FC<LessonDescriptionProps> = ( {lesson, panelWidthPercentage } ) => {
+    console.log(panelWidthPercentage)
     return (
         <div className='bg-dark-layer-1'>
 			{/* TAB */}
@@ -62,11 +64,11 @@ const LessonDescription:React.FC<LessonDescriptionProps> = ( {lesson} ) => {
 						</div>
 						*/}
 
-						{/* Lesson Statement(paragraphs) */}
-						<div className="flex justify-center pt-3">
-							<div className='text-white text-md'>
-								<div dangerouslySetInnerHTML={{ __html: lesson.content }} />
-							</div>
+						{/* Lesson Statement (paragraphs) */}
+						<div id="lesson-statement" className="flex justify-center pt-3">
+						<div className={`lesson-statement text-white text-md ${panelWidthPercentage > 50 ? "max-w-[60%]" : "max-w-full"}`}>
+							<div dangerouslySetInnerHTML={{ __html: lesson.content }} />
+						</div>
 						</div>
 						
 

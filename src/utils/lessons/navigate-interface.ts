@@ -1,7 +1,7 @@
 import asset from 'assert'
 import { Lesson } from '../types/lesson';
 
-const starterCodeNavigateInterface = `a = 1`
+const starterCodeNavigateInterface = ``
 
 // Check if the user has the correct answer
 const handlerNavigateInterface = (fn: any) => {

@@ -1,7 +1,7 @@
 import asset from 'assert'
 import { Lesson } from '../types/lesson';
 
-const starterCodeArrival = `a = 1`
+const starterCodeArrival = ``
 
 // Check if the user has the correct answer
 const handlerArrival = (fn: any) => {
