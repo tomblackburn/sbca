@@ -62,10 +62,10 @@ const Sidebar:React.FC<SidebarProps> = () => {
                                 <div className='navbarBtnExtension-tooltip'>Launch Operations</div>
                             </div>
                             <div className='items-center inline-block mr-1'>
-                                <button className='navbarBtn group'>
+                                <div className='navbarBtn group'>
                                     <GiAutoRepair size={30} className='text-yellow-500'/>
                                     <div className='navbarBtnExtension-tooltip'>Ship Mechanics</div>
-                                </button>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -10,7 +10,7 @@ export type Lesson = {
 
 export const lessons: Lesson[] = [
 	{
-		id: "navigating-interface",
+		id: "navigate-interface",
 		title: "Navigating the Interface",
 		section: "Navigating the Interface",
 		chapter: "Introduction",

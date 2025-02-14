@@ -5,11 +5,11 @@ import { Code } from '@mantine/core';
 import { vscodeDark } from "@uiw/codemirror-theme-vscode";
 import { python } from "@codemirror/lang-python";
 import CodeMirror, { EditorState, EditorView, highlightActiveLine } from "@uiw/react-codemirror";
-import { NodeNextRequest } from "next/dist/server/base-http/node";
 import YouTube from "react-youtube";
+import { Lesson }from "@/utils/types/lesson";
 
 type LessonDescriptionProps = {
-    
+    lesson: Lesson;
 };
 
 const LessonDescription:React.FC<LessonDescriptionProps> = () => {
