@@ -91,7 +91,7 @@ class School:
                 className='h-[calc(100vh-94px)]' 
                 direction='vertical' 
                 sizes={[60, 40]} 
-                minSize={60}
+                minSize={8}
             >
                 {/* Editor Panel with Footer */}
                 <div className='w-full flex flex-col overflow-auto relative'>

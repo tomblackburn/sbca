@@ -10,6 +10,12 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			dropShadow: {
+				glow: [
+				  "0 0px 20px rgba(101, 163, 13, 0.2)",
+				  "0 0px 65px rgba(101, 163, 13, 0.1)"
+				]
+			},
 			colors: {
 				"code-color": "rgb(53,53,53)",
 				"dark-gray-bg": "rgb(1,2,16)",
