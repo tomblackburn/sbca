@@ -25,7 +25,9 @@ const LessonDescription:React.FC<LessonDescriptionProps> = ( {lesson, panelWidth
 				</div>
 			</div>
 
-			<div className='flex px-0 py-4 h-[calc(100vh-94px)] overflow-y-auto'>
+			
+
+			<div className="flex px-0 py-4 h-[calc(100vh-94px)] overflow-y-auto">
 				<div className='px-5'>
 					{/* Problem heading */}
 					<div className='w-full justify-center'>

@@ -5,6 +5,8 @@ import Sidebar from "../Sidebar/Sidebar";
 import { Lesson } from "@/utils/types/lesson";
 import EditorFooter from "./CodeEditor/EditorFooter";
 import { useState } from "react";
+import { GiWizardStaff } from "react-icons/gi";
+import { renderToStaticMarkup } from "react-dom/server";
 
 type WorkspaceProps = {
 	lesson: Lesson
