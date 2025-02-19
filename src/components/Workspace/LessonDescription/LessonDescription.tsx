@@ -7,6 +7,7 @@ import { python } from "@codemirror/lang-python";
 import CodeMirror, { EditorState, EditorView, highlightActiveLine } from "@uiw/react-codemirror";
 import YouTube from "react-youtube";
 import { Lesson }from "@/utils/types/lesson";
+import { FaDiscord } from "react-icons/fa";
 
 type LessonDescriptionProps = {
     lesson: Lesson;
@@ -25,14 +26,18 @@ const LessonDescription:React.FC<LessonDescriptionProps> = ( {lesson, panelWidth
 				</div>
 			</div>
 
-			
-
 			<div className="flex px-0 py-4 h-[calc(100vh-94px)] overflow-y-auto">
 				<div className='px-5'>
 					{/* Problem heading */}
 					<div className='w-full justify-center'>
 						<div className='flex space-x-4'>
 							<div className='flex-1 mr-2 text-lg text-white font-medium'>{lesson.title}</div>
+							<button className='flex cursor-pointer items-center rounded-lg focus:outline-none bg-dark-layer-2 px-4 py-1 hover:ring-2 hover:ring-discord-blurple'>
+								<div className='flex items-center px-1'>
+									<FaDiscord className="text-discord-blurple pr-2 hover:animate-tinkle" size={30} />
+									<div className='text-sm text-label-2 text-dark-label-2 font-medium'>Discuss in Discord</div>
+								</div>
+							</button>
 						</div>
 						<div className='flex items-center mt-3'>
 							<div

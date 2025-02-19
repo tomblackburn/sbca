@@ -17,9 +17,8 @@ const EditorFooter: React.FC<EditorFooterProps> = () => {
 					</button>
 				</div>
 				<div className='ml-auto flex items-center space-x-4'>
-					<button
-						className='px-3 py-1.5 text-sm items-center whitespace-nowrap transition duration-200 ease-in-out shadow-lg hover:shadow-purple-500/50 inline-flex bg-purple-700  hover:bg-purple-800 font-bold text-white rounded'
-					>
+					{/*<button className='px-3 py-1.5 text-sm items-center whitespace-nowrap transition duration-200 ease-in-out shadow-lg hover:shadow-purple-500/50 inline-flex bg-purple-700  hover:bg-purple-800 font-bold text-white rounded'>*/}
+					<button className="px-3 py-1.5 text-sm inline-flex items-center font-bold whitespace-nowrap rounded bg-purple-700 text-white shadow-lg transition duration-200 ease-in-out hover:bg-purple-800 hover:shadow-purple-500/50 hover:animate-float">
 						Cast Spell
 					</button>
 					<button

@@ -1,3 +1,5 @@
+const { RecoilBridge } = require('recoil');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: [
@@ -17,6 +19,7 @@ module.exports = {
 				]
 			},
 			colors: {
+				"discord-blurple": "rgb(88,101,242)",
 				"code-color": "rgb(53,53,53)",
 				"dark-gray-bg": "rgb(1,2,16)",
 				"dark-layer-0": "rgb(53,53,53)",
@@ -40,6 +43,31 @@ module.exports = {
 				"dark-green-s": "rgb(44 187 93)",
 				"dark-blue-s": "rgb(10 132 255)",
 			},
+			keyframes: {
+				tinkle: {
+					'0%, 100%': { transform: 'rotate(45deg)' },
+					
+				  },
+				vibrate: {
+				  '0%, 100%': { transform: 'translateX(0)' },
+				  '25%': { transform: 'translateX(-2px)' },
+				  '75%': { transform: 'translateX(2px)' },
+				},
+				bubble: {
+					'0%, 100%': { transform: 'scale(1)' },
+					'50%': { transform: 'scale(1.1)' },
+				},
+				float: {
+				'0%, 100%': { transform: 'translateY(0)' },
+				'50%': { transform: 'translateY(-1px)' },
+				},
+			  },
+			  animation: {
+				vibrate: 'vibrate 0.3s ease-in-out',
+				bubble: 'bubble 0.5s ease-in-out',
+				float: 'float 0.1s ease-in-out infinite',
+				tinkle: 'rotation 2s infinite linear alternate',
+			  },
 		},
 	},
 	plugins: [],
