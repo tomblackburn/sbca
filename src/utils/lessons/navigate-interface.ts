@@ -1,7 +1,7 @@
 import asset from 'assert'
 import { Lesson } from '../types/lesson';
 
-const starterCodeNavigateInterface = ``
+const starterCodeNavigateInterface = `# This is the Spellcrafting Chamber`
 
 // Check if the user has the correct answer
 const handlerNavigateInterface = (fn: any) => {
@@ -25,6 +25,18 @@ export const navigateInterface: Lesson = {
         <p class='mt-3 ml-3 mr-2'>💁 <strong>Wisdom of Zeus -</strong> Just below the lesson panel lies the <strong>Wisdom of Zeus</strong>, a reservoir of hidden advise. <strong>Resist the temptation to open it too soon! </strong>True mastery comes from exploration and problem-solving, so only reveal these hints when you’ve truly exhausted all other options. In some lessons, unlocking tips will require <strong>Runestones</strong>—precious magical tokens earned through your journey and by engaging in discussions within the mystical realm of <strong>Discordia</strong>. Use them wisely, for knowledge is most powerful when earned, not simply given.</p>
         <p class='mt-3 ml-3 mr-2'>📜 <strong>The Grand Archives</strong> – Throughout your journey, you will encounter <strong>enchanted tomes </strong>that hold deeper wisdom. Some will illuminate key concepts, while others may be required for the classes you attend within the story. Should you ever need them, a <strong>magical scroll </strong>awaits in the top-right corner of your screen—simply summon it, and the knowledge within shall be revealed. I shall remind you when you first attend your potion-making class!</p>
         <p class='mt-3'>There is much more to discover, though I would enjoy sharing it all with you, I will reveal my teachings in due time. For now, <strong>step forth into the world of Spellbound Coding—your adventure begins now!</strong></p>
+        <br \>
+        <section>    
+            <article>
+                <details>
+                    <summary class='text-lg font-medium'>🦁 Open the Wisdom of Zeus</summary>
+                    <p class='pt-4'>I see you seek the ancient wisdom that I behold. Fear not—within each lesson lies a sacred cache of guidance and helpful tips that I can offer. These enchanted tips will guide you down the path of truth and help you conquer even the most perplexing of tasks that your professors may have set for you.</p>
+                    <p class='pt-4'>However, be warned: do not summon this mystical knowledge at the first sign of difficulty. I urge you, attempt to unravel the spells on your own, for the true power of magic is forged through struggle and perseverance. Only when the shadows of doubt grow too deep should you call upon me, and then the secrets shall be revealed to guide your hand.</p>
+        
+                </details>
+            </article> 
+        </section>
+        
     `,
     handlerFunction: handlerNavigateInterface,
 	starterCode: starterCodeNavigateInterface,

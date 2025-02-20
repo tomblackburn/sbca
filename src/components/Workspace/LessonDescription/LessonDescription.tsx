@@ -79,17 +79,8 @@ const LessonDescription:React.FC<LessonDescriptionProps> = ( {lesson, panelWidth
 						</div>
 						
 
-						{/* Examples */}
-						<div className='mt-4'>
-							<div>
-								<p className='font-medium text-white'>Example 2: </p>
-								<div className='example-card'>
-									<pre>
-                                        cauldron_type = ""
-									</pre>
-								</div>
-							</div>
-                        </div>
+						{/* Examples 
+						<code class='text-red-500 p-0.5 px-1'>cauldron_material</code>
 
 						<div className='w-full flex flex-col overflow-auto relative bg-code-color px-3 py-3 rounded-md'>
 							<CodeMirror className="py-4"
@@ -97,7 +88,6 @@ const LessonDescription:React.FC<LessonDescriptionProps> = ( {lesson, panelWidth
 								theme={vscodeDark}
 								extensions={[python(), EditorView.editable.of(false), EditorState.readOnly.of(true)]}
 								style={{ fontSize: 14 }}
-								
 							/>
 						</div>
                       
@@ -108,16 +98,8 @@ const LessonDescription:React.FC<LessonDescriptionProps> = ( {lesson, panelWidth
                             </p>
 						</div>
 
-                        <div className='mt-4'>
-							<div>
-								<p className='font-medium text-white '>Example 2: </p>
-								<div className='example-card'>
-									<pre>
-                                        cauldron_type = "medium"
-									</pre>
-								</div>
-							</div>
-                        </div>
+						*/}
+
 					</div>
 				</div>
 			</div>
