@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PreferenceNavBar from './PreferenceNavBar/PreferenceNavBar';
 import Split from "react-split";
 import CodeMirror, { EditorView } from "@uiw/react-codemirror";
@@ -13,7 +13,8 @@ type CodeEditorProps = {
 };
 
 const CodeEditor:React.FC<CodeEditorProps> = ( {lesson} ) => {
-      
+
+
     return (
 		<div className='flex flex-col bg-dark-layer-1 relative overflow-x-hidden overflow-y-hidden'>
 			<PreferenceNavBar />
